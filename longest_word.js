@@ -1,12 +1,14 @@
-
-
+(function(){
 var lorem = document.getElementById("lorem").innerHTML; //This turns the contents of lorem into an array.
 var string = lorem.split(" "); //This splits the p into an array with each word a value in the array. 
 
-string.sort(function(a,b) {
-  return b.length - a.length
+var longest_one = ""; 
+var longest_too = "";
+for (var i =0; i < string.length; i++) {
+  if (string[i].length > longest_one.length) {
+    longest_one = string[i];
+  }
 
-})
-
-console.log(string[0]);
-
+}
+console.log(longest_one);
+})();
